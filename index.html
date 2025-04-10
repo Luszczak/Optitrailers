@@ -13,19 +13,65 @@
     <div>
         <div class="container">
             <h2><header>
-                <div style="display: flex; gap: 20px;">
-                    <div>
-                        <i class="fas fa-play"></i>
-                        <div class="botton">Tipos de peliculas</div> 
+                <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <button onclick="toggleMovieTypes()"><i class="fas fa-play"></i> Tipo de películas</button>
+                        <ul id="movie-types" style="display: none; list-style-type: none; padding: 0;">
+                            <li>Acción</li>
+                            <li>Comedia</li>
+                            <li>Drama</li>
+                            <li>Ciencia Ficción</li>
+                            <li>Documental</li>
+                        </ul>
+                        <script>
+                            function toggleMovieTypes() {
+                                const movieTypes = document.getElementById('movie-types');
+                                movieTypes.style.display = movieTypes.style.display === 'none' ? 'block' : 'none';
+                            }
+                        </script>
                     </div>
                     <div>
-                        <i class="fas fa-users"></i> Comunidad
+                        <button onclick="toggleCommunityOptions()"><i class="fas fa-users"></i> Comunidad</button>
+                        <ul id="community-options" style="display: none; list-style-type: none; padding: 0;">
+                            <li>Atención al Cliente</li>
+                            <li>Operadores Activos</li>
+                        </ul>
+                        <script>
+                            function toggleCommunityOptions() {
+                                const communityOptions = document.getElementById('community-options');
+                                communityOptions.style.display = communityOptions.style.display === 'none' ? 'block' : 'none';
+                            }
+                        </script>
                     </div>
                     <div>
-                        <i class="fas fa-phone"></i> Contactos
+                        <button onclick="toggleContactOptions()"><i class="fas fa-phone"></i> Contactos</button>
+                        <ul id="contact-options" style="display: none; list-style-type: none; padding: 0;">
+                            <li>Teléfono</li>
+                            <li>Email</li>
+                            <li>Soporte en línea</li>
+                        </ul>
+                        <script>
+                            function toggleContactOptions() {
+                                const contactOptions = document.getElementById('contact-options');
+                                contactOptions.style.display = contactOptions.style.display === 'none' ? 'block' : 'none';
+                            }
+                        </script>
                     </div>
                     <div>
-                        <i class="fas fa-cog"></i> Settings
+                        <button onclick="toggleSettings()"><i class="fas fa-cog"></i> Settings</button>
+                        <ul id="settings-options" style="display: none; list-style-type: none; padding: 0;">
+                            <li>Perfil</li>
+                            <li>Preferencias</li>
+                            <li>Seguridad</li>
+                        </ul>
+                        <script>
+                            function toggleSettings() {
+                                const settingsOptions = document.getElementById('settings-options');
+                                settingsOptions.style.display = settingsOptions.style.display === 'none' ? 'block' : 'none';
+                            }
+                        </script>
+                    </div>
+                </div>
                     </div>
                 </div>
             </header></h2>

@@ -1,3 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #272727;
+    margin: 2px;
+    padding: 0;
+    color: rgb(238, 255, 0);
+    
+}
+.encabezado {
+    background-color: #000000;
+    color: rgb(238, 255, 0);
+    padding: 2px;
+    margin: -2px;
+    text-align: left;
+}
 .carousel {
     display: flex;
     align-items: center;
@@ -16,8 +31,8 @@
     flex: 0 0 auto;
     width: 150px;
     height: 150px;
-    background-color: #f0f0f0;
-    border: 1px solid #ffffff;
+    background-color: #000000;
+    border: 1px solid #ffe601;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,8 +42,8 @@
 }
 
 .carousel-button {
-    background-color: #007bff;
-    color: white;
+    background-color: #f7fc00;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -62,8 +77,8 @@
 .grid-item {
     width: 100px;
     height: 100px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color: #000000;
+    border: 1px solid #fbff00;
     display: flex;
     align-items: center;
     justify-content: center;

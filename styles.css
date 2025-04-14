@@ -23,19 +23,9 @@ body {
     margin: 10px 0 20px;
 }
 
-.menu-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.menu-item {
-    position: relative;
-}
-
+/* Botones */
 .menu-item button {
-    background-color: #8B1A0E;
+    background-color: #ff6f61;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -44,37 +34,54 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centra el texto horizontalmente */
     gap: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease-in; /* Animación para hover */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
+/* Efecto hover en botones */
 .menu-item button:hover {
-    background-color: #8B1A0E;
+    background-color: #e55a4d;
+    transform: translateY(-2px); /* Levanta el botón ligeramente */
 }
 
+/* Menús desplegables */
 .menu-item ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2f2f2f;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     list-style: none;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
+
+    transform: translateY(-10px); /* Inicia más arriba para el efecto de deslizamiento */
+    opacity: 0; /* Comienza invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Suaviza la transición */
 }
 
+/* Mostrar el menú con animación */
+.menu-item ul.show {
+    display: block; /* Asegúrate de que sea visible */
+    transform: translateY(0); /* Desliza hacia abajo */
+    opacity: 1; /* Hace visible el menú */
+}
+
+/* Elementos del menú */
 .menu-item ul li {
     padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: auto;
 }
 
 .menu-item ul li:hover {
-    background-color: #4f4f4f;
+    background-color: #f0f0f0;
 }
 
 .menu-item ul li i {

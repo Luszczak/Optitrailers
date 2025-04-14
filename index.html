@@ -1,124 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Optitrailers</title>
-</head>
-<body>
-    <div>
-        <div class="encabezado">
-            <h1>Optitrailers</h1>
-            <h2>Explora tus géneros favoritos y más</h2>
-            <div class="menu-container">
-                <div class="menu-item">
-                    <button onclick="toggleMenu('movie-types')"><i class="fas fa-play"></i> Tipo de películas</button>
-                    <ul id="movie-types">
-                        <li><i class="fas fa-film"></i> Acción</li>
-                        <li><i class="fas fa-laugh"></i> Comedia</li>
-                        <li><i class="fas fa-theater-masks"></i> Drama</li>
-                        <li><i class="fas fa-heart"></i> Romance</li>
-                        <li><i class="fas fa-ghost"></i> Terror</li>
-                        <li><i class="fas fa-hiking"></i> Aventura</li>
-                        <li><i class="fas fa-palette"></i> Animación</li>
-                        <li><i class="fas fa-rocket"></i> Ciencia Ficción</li>
-                    </ul>
-                </div>
-                <div class="menu-item">
-                    <button onclick="toggleMenu('community-options')"><i class="fas fa-users"></i> Comunidad</button>
-                    <ul id="community-options">
-                        <li><i class="fas fa-headset"></i> Atención al Cliente</li>
-                        <li><i class="fas fa-user-friends"></i> Operadores Activos</li>
-                    </ul>
-                </div>
-                <div class="menu-item">
-                    <button onclick="toggleMenu('contact-options')"><i class="fas fa-phone"></i> Contactos</button>
-                    <ul id="contact-options">
-                        <li><i class="fas fa-phone-alt"></i> Teléfono</li>
-                        <li><i class="fas fa-envelope"></i> Email</li>
-                        <li><i class="fas fa-comments"></i> Soporte en línea</li>
-                    </ul>
-                </div>
-                <div class="menu-item">
-                    <button onclick="toggleMenu('settings-options')"><i class="fas fa-cog"></i> Settings</button>
-                    <ul id="settings-options">
-                        <li><i class="fas fa-sliders-h"></i> Preferencias</li>
-                        <li><i class="fas fa-lock"></i> Seguridad</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="cartelera">
-            <h2>Cartelera</h2>
-            <div class="peliculas">
-                <div class="pelicula">
-                    <img src="https://es.web.img3.acsta.net/img/6d/7e/6d7ebaf55a56605c074747f74824fb99.jpg" alt="Película 1">
-                    <h3>Minecraft la pelicula</h3>
-                    <p>Bienvenido al mundo de minecraft!</p>
-                </div>
-                <div class="pelicula">
-                    <img src="https://es.web.img3.acsta.net/c_310_420/img/e2/7a/e27af9794d1f143b8eefe2e5ff5eb466.jpg" alt="Película 2">
-                    <h3>Kaiju N°8</h3>
-                    <p>Ríe sin parar con esta hilarante historia.</p>
-                </div>
-                <div class="pelicula">
-                    <img src="https://i.ibb.co/Ndz6V1Sy/Captura-de-pantalla-2025-04-14-165343.png" alt="Película 3">
-                    <h3>Un gay anda suelto</h3>
-                    <p>Explora las profundidades del culo humano.</p>
-                </div>
-            </div>
-        </div>
-
-        <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los menús
-    const allMenus = document.querySelectorAll('.menu-container ul');
-
-    // Función para cerrar todos los menús
-    function closeAllMenus() {
-        allMenus.forEach(menu => {
-            menu.classList.remove('show'); // Quita la clase 'show' para ocultarlos
-        });
-    }
-
-    // Función para alternar un menú
-    function toggleMenu(menuId) {
-        const menu = document.getElementById(menuId);
-
-        // Cierra todos los menús antes de abrir el seleccionado
-        closeAllMenus();
-
-        // Cambia el estado del menú seleccionado
-        if (menu.classList.contains('show')) {
-            menu.classList.remove('show');
-        } else {
-            menu.classList.add('show');
-        }
-    }
-
-    // Cierra todos los menús si se hace clic fuera de ellos
-    document.addEventListener('click', (event) => {
-        const clickInsideMenu = event.target.closest('.menu-container');
-        if (!clickInsideMenu) {
-            closeAllMenus();
-        }
-    });
-
-    // Asocia la función toggleMenu a los botones del menú
-    const buttons = document.querySelectorAll('.menu-container button');
-    buttons.forEach(button => {
-        const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
-        button.addEventListener('click', (event) => {
-            event.stopPropagation(); // Evita que el clic cierre el menú
-            toggleMenu(menuId);
-        });
-    });
-});
-</script>
-    </div>
-</body>
-</html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <title>Optitrailers</title>
+ </head>
+ <body>
+     <div>
+         <div class="encabezado">
+             <h1>Optitrailers</h1>
+             <h2>Explora tus géneros favoritos y más</h2>
+             <div class="menu-container">
+                 <div class="menu-item">
+                     <button onclick="toggleMenu('movie-types')"><i class="fas fa-play"></i> Tipo de películas</button>
+                     <ul id="movie-types">
+                         <li><i class="fas fa-film"></i> Acción</li>
+                         <li><i class="fas fa-laugh"></i> Comedia</li>
+                         <li><i class="fas fa-theater-masks"></i> Drama</li>
+                         <li><i class="fas fa-heart"></i> Romance</li>
+                         <li><i class="fas fa-ghost"></i> Terror</li>
+                         <li><i class="fas fa-hiking"></i> Aventura</li>
+                         <li><i class="fas fa-palette"></i> Animación</li>
+                         <li><i class="fas fa-rocket"></i> Ciencia Ficción</li>
+                     </ul>
+                 </div>
+                 <div class="menu-item">
+                     <button onclick="toggleMenu('community-options')"><i class="fas fa-users"></i> Comunidad</button>
+                     <ul id="community-options">
+                         <li><i class="fas fa-headset"></i> Atención al Cliente</li>
+                         <li><i class="fas fa-user-friends"></i> Operadores Activos</li>
+                     </ul>
+                 </div>
+                 <div class="menu-item">
+                     <button onclick="toggleMenu('contact-options')"><i class="fas fa-phone"></i> Contactos</button>
+                     <ul id="contact-options">
+                         <li><i class="fas fa-phone-alt"></i> Teléfono</li>
+                         <li><i class="fas fa-envelope"></i> Email</li>
+                         <li><i class="fas fa-comments"></i> Soporte en línea</li>
+                     </ul>
+                 </div>
+                 <div class="menu-item">
+                     <button onclick="toggleMenu('settings-options')"><i class="fas fa-cog"></i> Settings</button>
+                     <ul id="settings-options">
+                         <li><i class="fas fa-sliders-h"></i> Preferencias</li>
+                         <li><i class="fas fa-lock"></i> Seguridad</li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+ 
+ 
+         <div class="cartelera">
+             <h2>Cartelera</h2>
+             <div class="peliculas">
+                 <div class="pelicula">
+                     <img src="https://es.web.img3.acsta.net/img/6d/7e/6d7ebaf55a56605c074747f74824fb99.jpg" alt="Película 1">
+                     <h3>Minecraft la pelicula</h3>
+                     <p>Bienvenido al mundo de minecraft!</p>
+                 </div>
+                 <div class="pelicula">
+                     <img src="https://es.web.img3.acsta.net/c_310_420/img/e2/7a/e27af9794d1f143b8eefe2e5ff5eb466.jpg" alt="Película 2">
+                     <h3>Kaiju N°8</h3>
+                     <p>Ríe sin parar con esta hilarante historia.</p>
+                 </div>
+                 <div class="pelicula">
+                     <img src="https://i.ibb.co/Ndz6V1Sy/Captura-de-pantalla-2025-04-14-165343.png" alt="Película 3">
+                     <h3>Un gay anda suelto</h3>
+                     <p>Explora las profundidades del culo humano.</p>
+                 </div>
+             </div>
+         </div>
+ 
+         <script>
+     document.addEventListener('DOMContentLoaded', () => {
+         // Selecciona todos los menús
+         const allMenus = document.querySelectorAll('.menu-container ul');
+ 
+         // Función para cerrar todos los menús
+         function closeAllMenus() {
+             allMenus.forEach(menu => {
+                 menu.style.display = 'none';
+             });
+         }
+ 
+         // Función para alternar un menú
+         function toggleMenu(menuId) {
+             const menu = document.getElementById(menuId);
+ 
+             // Cierra todos los menús antes de abrir el seleccionado
+             closeAllMenus();
+ 
+             // Cambia el estado del menú seleccionado
+             if (menu.style.display === 'block') {
+                 menu.style.display = 'none';
+             } else {
+                 menu.style.display = 'block';
+             }
+         }
+ 
+         // Cierra todos los menús si se hace clic fuera de ellos
+         document.addEventListener('click', (event) => {
+             const clickInsideMenu = event.target.closest('.menu-container');
+             if (!clickInsideMenu) {
+                 closeAllMenus();
+             }
+         });
+ 
+         // Asocia la función toggleMenu a los botones del menú
+         const buttons = document.querySelectorAll('.menu-container button');
+         buttons.forEach(button => {
+             const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
+             button.addEventListener('click', (event) => {
+                 event.stopPropagation(); // Evita que el clic cierre el menú
+                 toggleMenu(menuId);
+             });
+         });
+     });
+ </script>
+     </div>
+ </body>
+ </html>

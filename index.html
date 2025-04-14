@@ -75,49 +75,49 @@
 
         <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Selecciona todos los menús
-        const allMenus = document.querySelectorAll('.menu-container ul');
+    // Selecciona todos los menús
+    const allMenus = document.querySelectorAll('.menu-container ul');
 
-        // Función para cerrar todos los menús
-        function closeAllMenus() {
-            allMenus.forEach(menu => {
-                menu.style.display = 'none';
-            });
-        }
-
-        // Función para alternar un menú
-        function toggleMenu(menuId) {
-            const menu = document.getElementById(menuId);
-
-            // Cierra todos los menús antes de abrir el seleccionado
-            closeAllMenus();
-
-            // Cambia el estado del menú seleccionado
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        // Cierra todos los menús si se hace clic fuera de ellos
-        document.addEventListener('click', (event) => {
-            const clickInsideMenu = event.target.closest('.menu-container');
-            if (!clickInsideMenu) {
-                closeAllMenus();
-            }
+    // Función para cerrar todos los menús
+    function closeAllMenus() {
+        allMenus.forEach(menu => {
+            menu.classList.remove('show'); // Quita la clase 'show' para ocultarlos
         });
+    }
 
-        // Asocia la función toggleMenu a los botones del menú
-        const buttons = document.querySelectorAll('.menu-container button');
-        buttons.forEach(button => {
-            const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
-            button.addEventListener('click', (event) => {
-                event.stopPropagation(); // Evita que el clic cierre el menú
-                toggleMenu(menuId);
-            });
+    // Función para alternar un menú
+    function toggleMenu(menuId) {
+        const menu = document.getElementById(menuId);
+
+        // Cierra todos los menús antes de abrir el seleccionado
+        closeAllMenus();
+
+        // Cambia el estado del menú seleccionado
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        } else {
+            menu.classList.add('show');
+        }
+    }
+
+    // Cierra todos los menús si se hace clic fuera de ellos
+    document.addEventListener('click', (event) => {
+        const clickInsideMenu = event.target.closest('.menu-container');
+        if (!clickInsideMenu) {
+            closeAllMenus();
+        }
+    });
+
+    // Asocia la función toggleMenu a los botones del menú
+    const buttons = document.querySelectorAll('.menu-container button');
+    buttons.forEach(button => {
+        const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Evita que el clic cierre el menú
+            toggleMenu(menuId);
         });
     });
+});
 </script>
     </div>
 </body>

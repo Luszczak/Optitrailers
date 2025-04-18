@@ -53,72 +53,90 @@
  
  
          <div class="cartelera">
-             <h2>Cartelera</h2>
-             <div class="peliculas">
-                 <div class="pelicula">
-                     <img src="https://es.web.img3.acsta.net/img/6d/7e/6d7ebaf55a56605c074747f74824fb99.jpg" alt="Película 1">
-                     <h3>Minecraft la pelicula</h3>
-                     <p>Bienvenido al mundo de minecraft!</p>
-                 </div>
-                 <div class="pelicula">
-                     <img src="https://es.web.img3.acsta.net/c_310_420/img/e2/7a/e27af9794d1f143b8eefe2e5ff5eb466.jpg" alt="Película 2">
-                     <h3>Kaiju N°8</h3>
-                     <p>Ríe sin parar con esta hilarante historia.</p>
-                 </div>
-                 <div class="pelicula">
-                     <img src="https://i.ibb.co/Ndz6V1Sy/Captura-de-pantalla-2025-04-14-165343.png" alt="Película 3">
-                     <h3>Un gay anda suelto</h3>
-                     <p>Explora las profundidades del culo humano.</p>
-                 </div>
-             </div>
-         </div>
+            <h2>Cartelera</h2>
+            <div class="peliculas">
+
+                <div class="pelicula">
+                    <img src="https://es.web.img3.acsta.net/img/6d/7e/6d7ebaf55a56605c074747f74824fb99.jpg" alt="Minecraft la película">
+                    <div class="info-pelicula">
+                        <h3>Minecraft la película</h3>
+                        <p>Bienvenido al mundo de Minecraft, donde todo es posible.</p>
+                        <button class="btn-detalles" data-movie="1">Ver detalles</button>
+                    </div>
+                </div>
+
+                <div class="pelicula">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQpCnhGo3oDx9spX1TDLgOI17xVOUVzFifqfymnHZLwr_q-0OEU" alt="Kaiju N°8">
+                    <div class="info-pelicula">
+                        <h3>Kaiju N°8</h3>
+                        <p>Un hombre convertido en monstruo decide perseguir su sueño de infancia contra todo pronóstico.</p>
+                        <button class="btn-detalles" data-movie="2">Ver detalles</button>
+                    </div>
+                </div>
+
+                <div class="pelicula">
+                    <img src="https://images.abandomoviez.net/db/foto/db_33736_19.jpg" alt="Blanca Nieves">
+                    <div class="info-pelicula">
+                        <h3>Blanca Nieves</h3>
+                        <p>Una joven princesa, perseguida por una reina celosa, encuentra refugio con inesperados aliados y descubre su verdadero poder.</p>
+                        <button class="btn-detalles" data-movie="3">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para mostrar detalles de las películas -->
+        <div class="modal" id="movieModal">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h3 id="modalTitle">Título de la película</h3>
+                    <button class="modal-close" id="closeModal">&times;</button>
+                </div>
+                <!-- Body -->
+                <div class="modal-body">
+                    <!-- Tráiler embebido -->
+                    <iframe id="modalTrailer" class="modal-trailer" src="" allowfullscreen></iframe>
+                    <!-- Detalles adicionales -->
+                    <div class="modal-details" id="modalDetails">
+                        <div class="detail-item">
+                            <i class="fas fa-film"></i>
+                            <span id="modalGenre">Género</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="modalDuration">Duración</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span id="modalRating">Clasificación</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span id="modalReleaseDate">Fecha de estreno</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span id="modalCast">Reparto</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-video"></i>
+                            <span id="modalDirector">Director</span>
+                        </div>
+                        <div class="detail-item imdb-link">
+                            <i class="fas fa-link"></i>
+                            <a id="modalIMBd" href="#" target="_blank" rel="noopener noreferrer">Más información en IMDb</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button class="btn-reservar">Reservar</button>
+                </div>
+            </div>
+        </div>
  
-         <script>
-     document.addEventListener('DOMContentLoaded', () => {
-         // Selecciona todos los menús
-         const allMenus = document.querySelectorAll('.menu-container ul');
- 
-         // Función para cerrar todos los menús
-         function closeAllMenus() {
-             allMenus.forEach(menu => {
-                 menu.style.display = 'none';
-             });
-         }
- 
-         // Función para alternar un menú
-         function toggleMenu(menuId) {
-             const menu = document.getElementById(menuId);
- 
-             // Cierra todos los menús antes de abrir el seleccionado
-             closeAllMenus();
- 
-             // Cambia el estado del menú seleccionado
-             if (menu.style.display === 'block') {
-                 menu.style.display = 'none';
-             } else {
-                 menu.style.display = 'block';
-             }
-         }
- 
-         // Cierra todos los menús si se hace clic fuera de ellos
-         document.addEventListener('click', (event) => {
-             const clickInsideMenu = event.target.closest('.menu-container');
-             if (!clickInsideMenu) {
-                 closeAllMenus();
-             }
-         });
- 
-         // Asocia la función toggleMenu a los botones del menú
-         const buttons = document.querySelectorAll('.menu-container button');
-         buttons.forEach(button => {
-             const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
-             button.addEventListener('click', (event) => {
-                 event.stopPropagation(); // Evita que el clic cierre el menú
-                 toggleMenu(menuId);
-             });
-         });
-     });
- </script>
      </div>
+     <script src="script.js"></script>
  </body>
  </html>

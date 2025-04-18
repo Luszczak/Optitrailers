@@ -1,29 +1,41 @@
-<h1 align="center">🎉 Proyecto Final - Despensa 🎉</h1>
+<h1 align="center">🎥 Optitrailers - Tu Cine Favorito 🎥</h1>
 
 <div style="text-align: center;">
-    <img src="logo.png" alt="Imagen de portada" width="300" />
+    <img src="logo.png" alt="Optitrailers Logo" width="300" />
 </div>
 
-> [!NOTE]  
-> 📝 **"Despensa Simple"** es un sistema de gestión diseñado para pequeñas despensas y kioscos, facilitando el manejo de precios, inventarios y cuentas corrientes de forma sencilla y eficiente.
+> **Optitrailers** es una página web diseñada para ofrecer una experiencia única al explorar la cartelera de películas. Con un diseño moderno, responsivo y funcional, permite a los usuarios descubrir películas, ver detalles, tráilers y acceder a información adicional en IMDb.
 
 ## 📚 Índice
 
 - [Descripción del proyecto](#-descripción-del-proyecto)
+- [Características principales](#-características-principales)
 - [Estado del proyecto](#-estado-del-proyecto)
 - [Acceso al proyecto](#-acceso-al-proyecto)
-- [Cómo ejecutar el proyecto](%EF%B8%8F-cómo-ejecutar-el-proyecto)
+- [Cómo ejecutar el proyecto](#-cómo-ejecutar-el-proyecto)
 - [Tecnologías utilizadas](#-tecnologías-utilizadas)
 - [Conclusión](#-conclusión)
 
 ## 📖 Descripción del proyecto
 
-**Despensa El Tato** es una aplicación de escritorio pensada para ayudar a los propietarios de pequeños negocios a gestionar sus productos, controlar inventarios y realizar ventas de manera ágil y completamente gratuita. Entre sus funcionalidades destacan la búsqueda rápida de productos, la gestión de márgenes de ganancia, y el cálculo de vuelto.
+**Optitrailers** es una plataforma web que simula la experiencia de un cine en línea. Los usuarios pueden explorar una cartelera interactiva con información detallada de cada película, incluyendo tráilers, sinopsis, reparto, director y enlaces a IMDb para más información. El diseño está optimizado para dispositivos móviles y de escritorio, garantizando una experiencia fluida y atractiva.
 
-Este proyecto está pensado para ser accesible a emprendedores que recién inician, con una interfaz intuitiva y opciones personalizables.
+> 💡 **El objetivo principal** es ofrecer una interfaz intuitiva y visualmente atractiva para los amantes del cine.
 
-> [!TIP]  
-> 💡 **¡El proyecto es totalmente local!** No necesita acceso a internet para funcionar.
+## ✨ Características principales
+
+- **Cartelera interactiva**: Muestra las películas disponibles con imágenes, títulos y descripciones breves.
+- **Modal de detalles**: Al hacer clic en una película, se abre un modal con:
+  - Tráiler de la película.
+  - Género, duración, clasificación, fecha de estreno, reparto y director.
+  - Enlace a IMDb para más información.
+- **Menú de navegación**:
+  - Categorías como "Tipo de películas", "Comunidad", "Contactos" y "Settings".
+  - Submenús desplegables con opciones adicionales.
+- **Diseño responsivo**: Adaptado para dispositivos móviles y de escritorio.
+- **Estilo visual moderno**:
+  - Colores oscuros con acentos en rojo (#8B1A0E) y amarillo para destacar elementos importantes.
+  - Animaciones suaves al interactuar con los elementos.
 
 ## 🚧 Estado del proyecto
 
@@ -31,41 +43,50 @@ Este proyecto está pensado para ser accesible a emprendedores que recién inici
 🔨 **Proyecto en desarrollo** 🔨
 </p>
 
-Actualmente, la aplicación está en su versión beta, con funcionalidad completa para cálculos de ganancias e inventario. Se planea añadir más funciones en versiones futuras, como reportes automáticos, extracción de datos, inventario local y gráficos de ventas.
+Actualmente, el proyecto está en una versión funcional con todas las características principales implementadas. Se planean mejoras futuras, como:
 
-> [!WARNING]  
-> ⚠️ El sistema no tiene función de base de datos local, código de barras ni acceso en línea.
+- Sistema de reservas en línea.
+- Integración con APIs de películas para obtener información en tiempo real.
+- Funcionalidades avanzadas como filtros por género y búsqueda personalizada.
 
 ## 🔗 Acceso al proyecto
 
 Puedes acceder al código fuente del proyecto desde el siguiente enlace:
 
-- [Repositorio GitHub](https://github.com/HugoAleOlguin/on_de_Despensas)
+- [Repositorio GitHub](https://github.com/HugoAleOlguin/Optitrailers)
 
 ## 🛠️ Cómo ejecutar el proyecto
 
-Para ejecutar el proyecto, sigue estos pasos:
+Puedes acceder al proyecto de dos maneras:
 
-1. Descarga el archivo 👉 [Releases](https://github.com/HugoAleOlguin/Gestion_de_Despensas/releases)
-2. Abre el archivo `Despensa.simple.v2.1.cpp` en tu entorno de desarrollo C++ preferido.
-3. Compila y ejecuta el código.
+1. **Página oficial**:  
+   Accede directamente desde el navegador a través del siguiente enlace:  
+   👉 [Optitrailers - Página Oficial](https://luszczak.github.io/Optitrailers/)
 
-> [!IMPORTANT]  
-> ⚠️ Asegúrate de tener un compilador C++ configurado en tu sistema.
+2. **Ejecutar localmente**:  
+   Si prefieres ejecutarlo localmente, sigue estos pasos:
+
+   1. Clona el repositorio
+   2. Navega al directorio del proyecto
+   3. Abre el archivo `index.html` en tu navegador preferido.
+
+> ⚠️ **Nota**: Asegúrate de tener conexión a internet para cargar los íconos de Font Awesome y otros recursos externos.
 
 ## 🖥️ Tecnologías utilizadas
 
-- **Lenguaje**: C++
-- **Sistema Operativo**: Windows
-- **IDE recomendado**: Dev-C++
+- **HTML5**: Estructura del contenido.
+- **CSS3**: Estilos y diseño responsivo.
+- **JavaScript**: Funcionalidad interactiva (modales, menús, etc.).
+- **Font Awesome**: Íconos para mejorar la experiencia visual.
 
 <div style="text-align: center;">
-    <img src="cpp.png" alt="C++" width="40" />
-    <img src="dev.png" alt="Dev-C++" width="40" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" width="40" height="40" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS3" width="40" height="40" />
+    <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript" width="40" height="40" />
 </div>
 
 ## 💬 Conclusión
 
-**"Despensa Simple"** es un proyecto pensado para simplificar la vida de los emprendedores, brindando una herramienta útil y fácil de usar. El objetivo es mejorar el sistema con nuevas funcionalidades conforme se adquieran más conocimientos.
+**Optitrailers** es un proyecto diseñado para ofrecer una experiencia inmersiva y moderna al explorar películas. Con un enfoque en la usabilidad y el diseño visual, busca ser una herramienta útil y atractiva para los amantes del cine.
 
-> ✨ **Las mejoras futuras incluirán reportes detallados y más opciones de personalización!**
+> ✨ **¡Próximamente se añadirán más funcionalidades para mejorar la experiencia del usuario!**

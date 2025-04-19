@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #000000;
+    background-color: #010113; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
     margin: 0;
     padding: 0;
 }
@@ -81,56 +82,303 @@ body {
     margin-right: 10px;
 }
 
+
+
+
+
+
+
+/*-------------------CARTELERA----------------(hugo)*/
 .cartelera {
-    background-color: #1e1e2f;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    border-top: 4px solid #8B1A0E;
+    background-color: #05052092; /* Fondo oscuro */
+    border: 2px solid #8B1A0E; /* Borde oscuro */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);;
 }
 
 .cartelera h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.cartelera .peliculas {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cartelera .pelicula {
-    background-color: #2f2f2f;
-    color: #fff;
-    border-radius: 10px;
-    padding: 50px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 180px;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.peliculas {
+    /* Fondo transparente */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
+    overflow: visible;
+}
+
+.pelicula {
+    background-color: #14142369; /* Fondo oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    height: 700px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-.cartelera .pelicula:hover {
+.pelicula:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(139, 0, 0, 0.515);
+    
 }
 
-.cartelera .pelicula img {
-    width: 100%;
-    height: 60%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.pelicula img {
+    width:300px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.cartelera .pelicula h3 {
+.info-pelicula {
+    padding: 15px;
+}
+
+.info-pelicula h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #f8f9fa; /* Texto claro */
 }
 
-.cartelera .pelicula p {
+.info-pelicula p {
     font-size: 0.9rem;
-    line-height: 1.4;
-    color: #b69090;
+    color: #ccc; /* Texto claro */
+    margin-bottom: 15px;
+}
+
+.btn-detalles {
+    background-color: #8B1A0E;
+    color: #fff;
+    border: none;
+    padding: 20px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detalles:hover {
+    background-color: #a8231a;
+}
+
+/* Botón de reservar */
+.btn-reservar {
+    background-color: #8B1A0E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-reservar:hover {
+    background-color: #a8231a;
+}
+
+/*-------------------MODALES----------------(hugo)*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color:#01011336;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Redesigned Modal */
+.modal-content {
+    background-color: #05053085;
+    backdrop-filter: blur(10px);
+    color: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #8B1A0E;
+    border-radius: 10px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8B1A0E;
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #f8f9fa;
+}
+
+.modal-close {
+    background-color: transparent;
+    color: #f8f9fa;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #8B1A0E;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-trailer {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 30px;
+}
+
+.modal-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.modal-details .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #24021980;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #8B1A0E;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.modal-details .detail-item i {
+    font-size: 1.5rem;
+    color: #8B1A0E;
+}
+
+.modal-details .detail-item span {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+.modal-details .detail-item.imdb-link {
+    cursor: pointer;
+    transition:  transform 0.3s ease;
+}
+
+.modal-details .detail-item.imdb-link i {
+    font-size: 1.5rem;
+    color: #e4b017; /* Color dorado */
+}
+
+.modal-details .detail-item.imdb-link:hover {
+    transform: scale(1.1);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-reservar {
+    background-color: #8B1A0E;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #a8231a;
+}
+
+/* Animación para el modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .peliculas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pelicula {
+        width: 90%;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-trailer {
+        height: 250px;
+    }
+
+    .modal-details {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-details p {
+        flex: 1 1 100%;
+    }
 }

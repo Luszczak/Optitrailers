@@ -1,7 +1,7 @@
 <h1 align="center">🎥 Optitrailers - Tu Cine Favorito 🎥</h1>
 
 <div style="text-align: center;">
-    <img src="logo.png" alt="Optitrailers Logo" width="300" />
+    <img src="https://i.ibb.co/Ndz6V1Sy/Captura-de-pantalla-2025-04-14-165343.png" alt="Optitrailers Logo" width="300" />
 </div>
 
 > **Optitrailers** es una página web diseñada para ofrecer una experiencia única al explorar la cartelera de películas. Con un diseño moderno, responsivo y funcional, permite a los usuarios descubrir películas, ver detalles, tráilers y acceder a información adicional en IMDb.

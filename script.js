@@ -103,5 +103,38 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     //---------------HEADER------------------//
-    
-        
+
+    //---------------HEADER------------------//
+
+    // Función para cerrar todos los menús desplegables
+    function closeAllMenus() {
+        document.querySelectorAll('.menu-item ul').forEach(menu => {
+            menu.style.display = 'none';
+        });
+    }
+
+    // Función para alternar un menú desplegable
+    function toggleMenu(menuId) {
+        const menu = document.getElementById(menuId);
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            closeAllMenus(); // Cierra otros menús antes de abrir el seleccionado
+            menu.style.display = 'block';
+        }
+    }
+
+    // Asignar eventos a los botones del menú
+    document.querySelectorAll('.menu-item button').forEach(button => {
+        const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que el clic cierre el menú
+            toggleMenu(menuId);
+        });
+    });
+
+    // Cerrar todos los menús si se hace clic fuera de ellos
+    document.addEventListener('click', () => {
+        closeAllMenus();
+    });
+});

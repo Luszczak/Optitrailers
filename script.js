@@ -5,42 +5,66 @@ document.addEventListener('DOMContentLoaded', () => {
         const movies = {
             1: {
                 title: "Minecraft la película",
-                description: "Explora el mundo de Minecraft en esta emocionante aventura.",
                 genre: "Aventura",
                 duration: "1h 45m",
                 rating: "PG",
-                releaseDate: "2023-05-01",
+                releaseDate: "20235",
                 cast: "Steve, Alex, Creeper",
                 director: "Markus Persson",
                 trailer: "https://www.youtube.com/embed/W_l7bXqWZyY",
                 imdb: "https://www.imdb.com/es/title/tt3566834/" // IMDb link
             },
+    
             2: {
+                title: "Blancanieves",
+                genre: "Comedia",
+                duration: "1h 30m",
+                rating: "PG",
+                releaseDate: "2025",
+                cast: "John Doe, Jane Smith",
+                director: "Emily Johnson",
+                trailer: "https://www.youtube.com/embed/BE0BwFSYXOQ",
+                imdb: "https://www.imdb.com/es/title/tt6208148/" // IMDb link
+            },
+    
+            3: {
+                title: "Thunderbolts*",
+                genre: "Accion",
+                duration: "2h 6min",
+                rating: "PG-13",
+                releaseDate: "2025",
+                cast: "Florence PughLewis, PullmanSebastian Stan",
+                director: "Jake Schreier",
+                trailer: "https://www.youtube.com/embed/N1GAypxl3XE",
+                imdb: "https://www.imdb.com/es/title/tt20969586/" // IMDb link
+            },
+    
+            4: {
+                title: "Pecadores",
+                genre: "Accion",
+                duration: "2h 17min",
+                rating: "B15",
+                releaseDate: "2025",
+                cast: "Miles CatonSaul, WilliamsAndrene, Ward-Hammond",
+                director: "Ryan Coogler",
+                trailer: "https://www.youtube.com/embed/bAkWFyEEYSI",
+                imdb: "https://www.imdb.com/es/title/tt31193180/" // IMDb link
+            },
+    
+            5: {
                 title: "Kaiju N°8",
-                description: "Una historia llena de acción y monstruos gigantes.",
-                genre: "Acción",
+                genre: "Accion",
                 duration: "2h 10m",
                 rating: "PG-13",
-                releaseDate: "2023-06-15",
+                releaseDate: "2025",
                 cast: "Kafka Hibino, Mina Ashiro",
                 director: "Shinji Higuchi",
                 trailer: "https://www.youtube.com/embed/n99eH2dePnA",
                 imdb: "https://www.imdb.com/es/title/tt35636950/" // IMDb link
             },
-            3: {
-                title: "Blancanieves",
-                description: "Una joven princesa, perseguida por una reina celosa, encuentra refugio con inesperados aliados y descubre su verdadero poder.",
-                genre: "Comedia",
-                duration: "1h 30m",
-                rating: "PG",
-                releaseDate: "2023-07-20",
-                cast: "John Doe, Jane Smith",
-                director: "Emily Johnson",
-                trailer: "https://www.youtube.com/embed/BE0BwFSYXOQ",
-                imdb: "https://www.imdb.com/es/title/tt6208148/" // IMDb link
-            }
         };
-    
+
+        
         // Referencias al modal y sus elementos
         const modal = document.getElementById("movieModal");
         const modalTitle = document.getElementById("modalTitle");

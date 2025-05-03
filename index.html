@@ -1,45 +1,58 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="styles.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <title>TrailersPelis</title>
- </head>
- <body>
-     <div>
-         <div class="encabezado">
-             <h1>Optitrailers</h1>
-             <h2>Explora tus géneros favoritos y más</h2>
-             <div class="menu-container">
-                 <div class="menu-item">
-                     <button onclick="toggleMenu('community-options')"><i class="fas fa-users"></i> Comunidad</button>
-                     <ul id="community-options">
-                         <li><i class="fas fa-headset"></i> Atención al Cliente</li>
-                         <li><i class="fas fa-user-friends"></i> Operadores Activos</li>
-                     </ul>
-                 </div>
-                 <div class="menu-item">
-                     <button onclick="toggleMenu('contact-options')"><i class="fas fa-phone"></i> Contactos</button>
-                     <ul id="contact-options">
-                         <li><i class="fas fa-phone-alt"></i> Teléfono</li>
-                         <li><i class="fas fa-envelope"></i> Email</li>
-                         <li><i class="fas fa-comments"></i> Soporte en línea</li>
-                     </ul>
-                 </div>
-                 <div class="menu-item">
-                     <button onclick="toggleMenu('settings-options')"><i class="fas fa-cog"></i> Settings</button>
-                     <ul id="settings-options">
-                         <li><i class="fas fa-sliders-h"></i> Preferencias</li>
-                         <li><i class="fas fa-lock"></i> Seguridad</li>
-                     </ul>
-                 </div>
-             </div>
-         </div>
- 
- 
-         <div class="cartelera">
+<html lang="en">
+<head>
+    <!-- META INFORMACIÓN Y RECURSOS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TrailersPelis</title>
+</head>
+<body>
+    <div>
+        <!-- SECCIÓN 1: ENCABEZADO Y NAVEGACIÓN 
+             - Contiene el título principal
+             - Menú de navegación con 3 categorías principales
+             - Uso de Font Awesome para iconos
+        -->
+        <div class="encabezado">
+            <h1>Optitrailers</h1>
+            <h2>Explora tus géneros favoritos y más</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <button onclick="toggleMenu('community-options')"><i class="fas fa-users"></i> Comunidad</button>
+                    <ul id="community-options">
+                        <li><i class="fas fa-headset"></i> Atención al Cliente</li>
+                        <li><i class="fas fa-user-friends"></i> Operadores Activos</li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <button onclick="toggleMenu('contact-options')"><i class="fas fa-phone"></i> Contactos</button>
+                    <ul id="contact-options">
+                        <li><i class="fas fa-phone-alt"></i> Teléfono</li>
+                        <li><i class="fas fa-envelope"></i> Email</li>
+                        <li><i class="fas fa-comments"></i> Soporte en línea</li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <button onclick="toggleMenu('settings-options')"><i class="fas fa-cog"></i> Settings</button>
+                    <ul id="settings-options">
+                        <li><i class="fas fa-sliders-h"></i> Preferencias</li>
+                        <li><i class="fas fa-lock"></i> Seguridad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: CARTELERA DE PELÍCULAS
+             - Grid responsive de películas
+             - Cada película tiene:
+                * Imagen de portada
+                * Título
+                * Descripción corta
+                * Botón de detalles
+        -->
+        <div class="cartelera">
             <h2>Cartelera</h2>
             <div class="peliculas">
 
@@ -89,7 +102,15 @@
 
             </div>
         </div>
-        <!-- Modal para mostrar detalles de las películas -->
+
+        <!-- SECCIÓN 3: MODAL DE DETALLES
+             - Se activa al hacer clic en "Ver detalles"
+             - Estructura:
+                * Header con título y botón de cierre
+                * Body con trailer y detalles
+                * Footer con botón de reserva
+             - Datos dinámicos vía JavaScript
+        -->
         <div class="modal" id="movieModal">
             <div class="modal-content">
                 <!-- Header -->
@@ -139,8 +160,7 @@
                 </div>
             </div>
         </div>
- 
-     </div>
-     <script src="script.js"></script>
- </body>
- </html>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

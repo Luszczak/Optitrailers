@@ -53,7 +53,7 @@ Actualmente, el proyecto está en una versión funcional con todas las caracter�
 
 Puedes acceder al código fuente del proyecto desde el siguiente enlace:
 
-- [Repositorio GitHub](https://github.com/HugoAleOlguin/Optitrailers)
+- [Repositorio GitHub](https://github.com/HugoAleOlguin/TrailerPelis)
 
 ## 🛠️ Cómo ejecutar el proyecto
 

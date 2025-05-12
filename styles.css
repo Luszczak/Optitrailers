@@ -12,10 +12,10 @@
 /* 1. VARIABLES GLOBALES Y CONFIGURACIÓN */
 :root {
     /* Paleta de colores principal */
-    --color-primary: #8B1A0E;
-    --color-primary-light: #a8231a;
-    --color-primary-dark: #6b140b;
-    --color-accent: #e4b017;
+    --color-primary: #ac0b0b;
+    --color-primary-light: #ac0b0b;
+    --color-primary-dark: #ac0b0b;
+    --color-accent: #ac0b0b;
 
     /* Colores de fondo */
     --bg-main: #010113;
@@ -29,10 +29,10 @@
     --text-muted: #ccc;
     
     /* Efectos y decoración */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
-    --shadow-hover: 0 6px 12px rgba(139, 26, 14, 0.3);
+    --shadow-sm: 0 2px 4px rgba(250, 0, 0, 0.2);
+    --shadow-md: 0 4px 8px rgba(250, 0, 0, 0.2);
+    --shadow-lg: 0 8px 16px rgba(250, 0, 0, 0.2);
+    --shadow-hover: 0 6px 12px rgba(250, 0, 0, 0.2);
     
     /* Bordes y espaciado */
     --border-radius-sm: 5px;
@@ -386,6 +386,59 @@ body {
 }
 
 .btn-reservar:hover {
+    background-color: var(--color-primary-light);
+}
+
+/* Estilos para el formulario de reservas */
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.form-group input {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.btn-confirmar {
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    border: none;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-normal);
+    margin-top: var(--spacing-md);
+}
+
+.btn-confirmar:hover {
     background-color: var(--color-primary-light);
 }
 

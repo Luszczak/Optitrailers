@@ -5,6 +5,7 @@
  * 3. Gestión de Películas
  * 4. Sistema de Modal
  * 5. Sistema de Menú
+ * 6. Sistema de Reservas
  * 
  * CONCEPTOS CLAVE:
  * - Event Delegation
@@ -53,18 +54,6 @@ function init() {
         },
 
         2: {
-            title: "Blancanieves",
-            genre: "Comedia",
-            duration: "1h 30m",
-            rating: "PG",
-            releaseDate: "2025",
-            cast: "John Doe, Jane Smith",
-            director: "Emily Johnson",
-            trailer: "https://www.youtube.com/embed/BE0BwFSYXOQ",
-            imdb: "https://www.imdb.com/es/title/tt6208148/" // IMDb link
-        },
-
-        3: {
             title: "Thunderbolts*",
             genre: "Accion",
             duration: "2h 6min",
@@ -76,7 +65,7 @@ function init() {
             imdb: "https://www.imdb.com/es/title/tt20969586/" // IMDb link
         },
 
-        4: {
+        3: {
             title: "Pecadores",
             genre: "Accion",
             duration: "2h 17min",
@@ -88,7 +77,7 @@ function init() {
             imdb: "https://www.imdb.com/es/title/tt31193180/" // IMDb link
         },
 
-        5: {
+        4: {
             title: "Kaiju N°8",
             genre: "Accion",
             duration: "2h 10m",
@@ -115,7 +104,7 @@ function init() {
     const modalDetails = utils.$("#modalDetails");
     const closeModal = utils.$("#closeModal");
 
-// Gestión del Modal
+    // Gestión del Modal
     function openModal(movieId) {
         const movie = movies[movieId];
         if (!movie) {
@@ -140,13 +129,13 @@ function init() {
         modal.classList.add(CONFIG.modalClass);
     }
 
-// Event Listeners
+    // Event Listeners
     const closeModalHandler = () => {
         modal.classList.remove(CONFIG.modalClass);
         modalTrailer.src = ""; // Detener el video
     };
 
-// Delegación de eventos para botones
+    // Delegación de eventos para botones
     document.addEventListener('click', (e) => {
         if (e.target.matches('.btn-detalles')) {
             openModal(e.target.dataset.movie);
@@ -155,7 +144,7 @@ function init() {
         }
     });
 
-// Cerrar con Escape
+    // Cerrar con Escape
     window.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.classList.contains(CONFIG.modalClass)) {
             closeModalHandler();
@@ -176,7 +165,7 @@ function init() {
         });
     }
 
-// Función para alternar un menú desplegable
+    // Función para alternar un menú desplegable
     function toggleMenu(menuId) {
         const menu = utils.$(`#${menuId}`);
         if (menu.style.display === 'block') {
@@ -187,7 +176,7 @@ function init() {
         }
     }
 
-// Asignar eventos a los botones del menú
+    // Asignar eventos a los botones del menú
     utils.$$('.menu-item button').forEach(button => {
         const menuId = button.getAttribute('onclick').match(/toggleMenu\('(.+)'\)/)[1];
         button.addEventListener('click', (e) => {
@@ -196,9 +185,68 @@ function init() {
         });
     });
 
-// Cerrar todos los menús si se hace clic fuera de ellos
+    // Cerrar todos los menús si se hace clic fuera de ellos
     document.addEventListener('click', () => {
         closeAllMenus();
+    });
+
+    /**
+     * SISTEMA DE RESERVAS
+     * Funcionalidad:
+     * - Apertura/cierre del modal de reservas
+     * - Gestión de formulario de reservas
+     * - Validación y confirmación de reservas
+     */
+    const reservationModal = utils.$("#reservationModal");
+    const closeReservation = utils.$("#closeReservation");
+    const reservationForm = utils.$("#reservationForm");
+    let currentMovieTitle = '';
+
+    function openReservationModal(movieTitle) {
+        currentMovieTitle = movieTitle;
+        utils.$("#reservationTitle").textContent = `Reservar: ${movieTitle}`;
+        reservationModal.classList.add(CONFIG.modalClass);
+    }
+
+    // Evento para el botón de reservar en el modal de película
+    utils.$(".btn-reservar").addEventListener('click', () => {
+        const movieTitle = utils.$("#modalTitle").textContent;
+        closeModalHandler(); // Cerrar modal de película
+        openReservationModal(movieTitle);
+    });
+
+    // Manejar el envío del formulario
+    reservationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = {
+            pelicula: currentMovieTitle,
+            nombre: utils.$("#nombre").value,
+            email: utils.$("#email").value,
+            fecha: utils.$("#fecha").value,
+            asientos: utils.$("#asientos").value
+        };
+        
+        // Aquí puedes agregar la lógica para procesar la reserva
+        console.log('Reserva realizada:', formData);
+        
+        // Mostrar confirmación
+        alert('¡Reserva realizada con éxito! Te enviaremos un email con los detalles.');
+        
+        // Cerrar modal y limpiar formulario
+        reservationModal.classList.remove(CONFIG.modalClass);
+        reservationForm.reset();
+    });
+
+    // Cerrar modal de reserva
+    closeReservation.addEventListener('click', () => {
+        reservationModal.classList.remove(CONFIG.modalClass);
+    });
+
+    // Cerrar con Escape
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            reservationModal.classList.remove(CONFIG.modalClass);
+        }
     });
 }
 

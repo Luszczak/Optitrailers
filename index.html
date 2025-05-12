@@ -66,20 +66,11 @@
                 </div>
 
                 <div class="pelicula">
-                    <img src="https://images.abandomoviez.net/db/foto/db_33736_19.jpg" alt="Blanca Nieves">
-                    <div class="info-pelicula">
-                        <h3>Blanca Nieves</h3>
-                        <p>Una joven princesa, perseguida por una reina celosa, encuentra refugio con inesperados aliados y descubre su verdadero poder.</p>
-                        <button class="btn-detalles" data-movie="2">Ver detalles</button>
-                    </div>
-                </div>
-
-                <div class="pelicula">
                     <img src="https://hips.hearstapps.com/hmg-prod/images/thunderbolts-poster-66f184dbe403e.jpg" alt="Thunderbolts">
                     <div class="info-pelicula">
                         <h3>Thunderbolts*</h3>
                         <p>Un grupo de supervillanos son reclutados para realizar misiones para el gobierno.</p>
-                        <button class="btn-detalles" data-movie="3">Ver detalles</button>
+                        <button class="btn-detalles" data-movie="2">Ver detalles</button>
                     </div>
                 </div>
                 <div class="pelicula">
@@ -87,7 +78,7 @@
                     <div class="info-pelicula">
                         <h3>Pecadores</h3>
                         <p>Dos hermanos enfrentan un mal sobrenatural al regresar a su ciudad natal.</p>
-                        <button class="btn-detalles" data-movie="4">Ver detalles</button>
+                        <button class="btn-detalles" data-movie="3">Ver detalles</button>
                     </div>
                 </div>
 
@@ -96,7 +87,7 @@
                     <div class="info-pelicula">
                         <h3>Kaiju N°8</h3>
                         <p>Un hombre convertido en monstruo decide perseguir su sueño de infancia contra todo pronóstico.</p>
-                        <button class="btn-detalles" data-movie="5">Ver detalles</button>
+                        <button class="btn-detalles" data-movie="4">Ver detalles</button>
                     </div>
                 </div>
 
@@ -156,8 +147,39 @@
                 </div>
                 <!-- Footer -->
                 <div class="modal-footer">
+                    <!-- Botno para reservar-->
                     <button class="btn-reservar">Reservar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de Reservas -->
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="reservationTitle">Reservar Película</h3>
+                <button class="modal-close" id="closeReservation">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="reservationForm" class="reservation-form">
+                    <div class="form-group">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombre</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha"><i class="fas fa-calendar"></i> Fecha</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asientos"><i class="fas fa-chair"></i> Número de Asientos</label>
+                        <input type="number" id="asientos" min="1" max="10" required>
+                    </div>
+                    <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                </form>
             </div>
         </div>
     </div>

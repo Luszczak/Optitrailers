@@ -61,7 +61,7 @@ Puedes acceder al proyecto de dos maneras:
 
 1. **Página oficial**:  
    Accede directamente desde el navegador a través del siguiente enlace:  
-   👉 [Optitrailers - Página Oficial](https://luszczak.github.io/Optitrailers/)
+   👉 [Optitrailers - Página Oficial](https://luszczak.github.io/TrailerPelis/)
 
 2. **Ejecutar localmente**:  
    Si prefieres ejecutarlo localmente, sigue estos pasos:

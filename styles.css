@@ -12,10 +12,10 @@
 /* 1. VARIABLES GLOBALES Y CONFIGURACIÓN */
 :root {
     /* Paleta de colores principal */
-    --color-primary: #ac0b0b;
-    --color-primary-light: #ac0b0b;
-    --color-primary-dark: #ac0b0b;
-    --color-accent: #ac0b0b;
+    --color-primary: #ffd900;
+    --color-primary-light: #ffd900;
+    --color-primary-dark: #ffd900;
+    --color-accent: #ffd900;
 
     /* Colores de fondo */
     --bg-main: #010113;
